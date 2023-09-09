@@ -1,4 +1,4 @@
-# Scrapy settings for yodobashi project
+# Scrapy settings for books_toscrape project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,10 +7,10 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'yodobashi'
+BOT_NAME = 'books_toscrape'
 
-SPIDER_MODULES = ['yodobashi.spiders']
-NEWSPIDER_MODULE = 'yodobashi.spiders'
+SPIDER_MODULES = ['books_toscrape.spiders']
+NEWSPIDER_MODULE = 'books_toscrape.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -25,7 +25,7 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 0.3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -45,13 +45,13 @@ DOWNLOAD_DELAY = 3
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'yodobashi.middlewares.YodobashiSpiderMiddleware': 543,
+#    'books_toscrape.middlewares.BooksToscrapeSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'yodobashi.middlewares.YodobashiDownloaderMiddleware': 543,
+#    'books_toscrape.middlewares.BooksToscrapeDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -63,7 +63,7 @@ DOWNLOAD_DELAY = 3
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'yodobashi.pipelines.YodobashiPipeline': 300,
+#    'books_toscrape.pipelines.BooksToscrapePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -87,4 +87,4 @@ HTTPCACHE_EXPIRATION_SECS = 86400
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-FEED_RXPORT_ENCODING = 'utf-8'
+FEED_EXPORT_ENCODING = 'utf-8'
